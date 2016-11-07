@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E16B82511DD11A2B008252F8 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16B82501DD11A2B008252F8 /* ThirdViewController.swift */; };
+		E16B82521DD11A2B008252F8 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16B82501DD11A2B008252F8 /* ThirdViewController.swift */; };
 		E1EE42B21DCF745F00B869AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EE42B11DCF745F00B869AE /* AppDelegate.swift */; };
 		E1EE42B41DCF745F00B869AE /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EE42B31DCF745F00B869AE /* FirstViewController.swift */; };
 		E1EE42B61DCF745F00B869AE /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EE42B51DCF745F00B869AE /* SecondViewController.swift */; };
@@ -28,6 +30,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E16B82501DD11A2B008252F8 /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		E1EE42AE1DCF745E00B869AE /* MyVoice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyVoice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1EE42B11DCF745F00B869AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1EE42B31DCF745F00B869AE /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -86,6 +89,7 @@
 				E1EE42B11DCF745F00B869AE /* AppDelegate.swift */,
 				E1EE42B31DCF745F00B869AE /* FirstViewController.swift */,
 				E1EE42B51DCF745F00B869AE /* SecondViewController.swift */,
+				E16B82501DD11A2B008252F8 /* ThirdViewController.swift */,
 				E1EE42B71DCF745F00B869AE /* Main.storyboard */,
 				E1EE42BA1DCF745F00B869AE /* Assets.xcassets */,
 				E1EE42BC1DCF745F00B869AE /* LaunchScreen.storyboard */,
@@ -218,6 +222,7 @@
 			files = (
 				E1EE42B61DCF745F00B869AE /* SecondViewController.swift in Sources */,
 				E1EE42B21DCF745F00B869AE /* AppDelegate.swift in Sources */,
+				E16B82511DD11A2B008252F8 /* ThirdViewController.swift in Sources */,
 				E1EE42B41DCF745F00B869AE /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -226,6 +231,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E16B82521DD11A2B008252F8 /* ThirdViewController.swift in Sources */,
 				E1EE42C91DCF745F00B869AE /* MyVoiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -426,6 +432,7 @@
 				E1EE42CF1DCF745F00B869AE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E1EE42D01DCF745F00B869AE /* Build configuration list for PBXNativeTarget "MyVoiceTests" */ = {
 			isa = XCConfigurationList;
@@ -434,6 +441,7 @@
 				E1EE42D21DCF745F00B869AE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

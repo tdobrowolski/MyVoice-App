@@ -39,6 +39,8 @@ class FirstViewController: UIViewController {
         deleteButton.backgroundColor = red; //formatowanie przycisku "Wyczysc pole tekstowe"
         deleteButton.layer.cornerRadius = 5.0;
         
+        self.hideKeyboardWhenTappedAround()
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -57,5 +59,16 @@ class FirstViewController: UIViewController {
     }
 
 
+}
+
+extension UIViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
+    }
+    
+    func dismissKeyboard() {
+        view.endEditing(true)
+    }
 }
 
