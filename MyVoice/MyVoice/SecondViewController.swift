@@ -8,8 +8,14 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class SecondViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
+    @IBOutlet weak var collectionView: UICollectionView!
+    
+    //let appleProducts = ["iPhone", "Apple Watch", "Mac", "iPad", "iPhone", "Apple Watch", "Mac", "iPad"]
+    
+    let imageArray = [UIImage(named: "Cross"), UIImage(named: "Police"), UIImage(named: "Cost"), UIImage(named: "WC"), UIImage(named: "laska"), UIImage(named: "lew"), UIImage(named: "ludzik"), UIImage(named: "las")]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -20,6 +26,52 @@ class SecondViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        
+        return imageArray.count
+        
+    }
 
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
+            as! CollectionViewCell
+        
+        cell.imageView?.image = self.imageArray[indexPath.row]
+        cell.layer.cornerRadius = 5.0
+        
+        return cell
+        
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        self.performSegue(withIdentifier: "showImage", sender: self)
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showImage"
+        {
+            let indexPaths = self.collectionView!.indexPathsForSelectedItems!
+            let indexPath = indexPaths[0] as NSIndexPath
+            
+            let vc = segue.destination as! NewViewController
+            
+            vc.image = self.imageArray[indexPath.row]!
+            
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let width = collectionView.frame.width / 2 - 24 // chuj wie czemu
+        
+        return CGSize(width: width, height: width)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 16.0
+    }
+    
 }
 
