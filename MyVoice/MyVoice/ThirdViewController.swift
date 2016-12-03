@@ -7,11 +7,20 @@
 //
 
 import UIKit
+import MessageUI
 
-class ThirdViewController: UIViewController {
+class ThirdViewController: UIViewController, MFMessageComposeViewControllerDelegate {
+    
+    func messageComposeViewController(_ controller: MFMessageComposeViewController, didFinishWith result: MessageComposeResult) {
+        
+        controller.dismiss(animated: true, completion: nil)
+    }
+
     
     @IBOutlet weak var firstCallButton: UIButton!
     @IBOutlet weak var firstSmsButton: UIButton!
+    @IBOutlet weak var secondCallButton: UIButton!
+    @IBOutlet weak var secondSmsButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,9 +29,13 @@ class ThirdViewController: UIViewController {
         
         firstCallButton.backgroundColor = orange; //formatowanie przycisku "Zadzwon"
         firstCallButton.layer.cornerRadius = 5.0;
+        secondCallButton.backgroundColor = orange;
+        secondCallButton.layer.cornerRadius = 5.0;
         
         firstSmsButton.backgroundColor = orange; //formatowanie przycisku "Wyslij alarmowego SMS'a"
         firstSmsButton.layer.cornerRadius = 5.0;
+        secondSmsButton.backgroundColor = orange;
+        secondSmsButton.layer.cornerRadius = 5.0;
 
         // Do any additional setup after loading the view.
     }
@@ -32,7 +45,35 @@ class ThirdViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func FirstCallAction(_ sender: Any) {
+        let url:NSURL = NSURL(string: "tel://123456789")!
+        UIApplication.shared.openURL(url as URL)
+    }
 
+    @IBAction func SecondCallAction(_ sender: Any) {
+        let url2:NSURL = NSURL(string: "tel://123456789")!
+        UIApplication.shared.openURL(url2 as URL)
+    }
+    
+    @IBAction func FirstSmsAction(_ sender: Any) {
+        let firstMessage = MFMessageComposeViewController()
+        firstMessage.body = "To jest wiadomość alarmowa. Mogę potrzebować pomocy."
+        firstMessage.recipients = ["694595123"]
+        firstMessage.messageComposeDelegate = self
+        
+        present(firstMessage, animated: true, completion: nil)
+    }
+    
+    @IBAction func SecondSmsAction(_ sender: Any) {
+        let secondMessage = MFMessageComposeViewController()
+        secondMessage.body = "To jest wiadomość alarmowa. Mogę potrzebować pomocy."
+        secondMessage.recipients = ["694595123"]
+        secondMessage.messageComposeDelegate = self
+        
+        present(secondMessage, animated: true, completion: nil)
+    }
+    
+    
     /*
     // MARK: - Navigation
 

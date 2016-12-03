@@ -12,6 +12,7 @@
 		E15B58091DEB646000322122 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E15B58081DEB646000322122 /* Images.xcassets */; };
 		E16B82511DD11A2B008252F8 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16B82501DD11A2B008252F8 /* ThirdViewController.swift */; };
 		E16B82521DD11A2B008252F8 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16B82501DD11A2B008252F8 /* ThirdViewController.swift */; };
+		E1A722A41DF36F7700459508 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1A722A31DF36F7700459508 /* MessageUI.framework */; };
 		E1EE42B21DCF745F00B869AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EE42B11DCF745F00B869AE /* AppDelegate.swift */; };
 		E1EE42B41DCF745F00B869AE /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EE42B31DCF745F00B869AE /* FirstViewController.swift */; };
 		E1EE42B61DCF745F00B869AE /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EE42B51DCF745F00B869AE /* SecondViewController.swift */; };
@@ -36,6 +37,7 @@
 		E15B58061DEB5EAE00322122 /* NewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewViewController.swift; sourceTree = "<group>"; };
 		E15B58081DEB646000322122 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		E16B82501DD11A2B008252F8 /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
+		E1A722A31DF36F7700459508 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		E1EE42AE1DCF745E00B869AE /* MyVoice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyVoice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1EE42B11DCF745F00B869AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1EE42B31DCF745F00B869AE /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1A722A41DF36F7700459508 /* MessageUI.framework in Frameworks */,
 				E1EE42D51DCF8D8700B869AE /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -124,6 +127,7 @@
 		E1EE42D31DCF8D8700B869AE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E1A722A31DF36F7700459508 /* MessageUI.framework */,
 				E1EE42D41DCF8D8700B869AE /* AVFoundation.framework */,
 			);
 			name = Frameworks;
