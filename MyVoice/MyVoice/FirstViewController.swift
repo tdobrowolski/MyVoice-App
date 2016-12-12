@@ -12,8 +12,7 @@ import AVFoundation
 class FirstViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet var noweSzybkieZdanie: UIView! // PopUp
-    
-    @IBOutlet weak var visualEffectView: UIVisualEffectView! // PopUp
+    @IBOutlet weak var popTextField: UITextField! // PopUp
     
     @IBOutlet weak var speakTableView: UITableView!
     @IBOutlet weak var myTextView: UITextView!
@@ -26,16 +25,19 @@ class FirstViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     var zdania = ["Poproszę 3 kilo cebuli.", "Reszty nie trzeba.", "Kiedy będzie obiad?.", "Ta aplikacja jest super.", "Co to za ulica?", "Gdzie znajdę dobrą restaurację?"]
     
-    var effect:UIVisualEffect! // PopUp
+    var isPop = false
+    
+    var effectView: UIVisualEffectView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        effect = visualEffectView.effect
-        visualEffectView.effect = nil
+        let orange = UIColor(red: 255.0/255.0, green: 123.0/255.0, blue: 105.0/255.0, alpha: 1.0)
+        let red = UIColor(red: 229.0/255.0, green: 57.0/255.0, blue: 53.0/255.0, alpha: 1.0)
         
         noweSzybkieZdanie.layer.cornerRadius = 5
+        
         
 
         self.speakTableView.delegate = self
@@ -44,9 +46,6 @@ class FirstViewController: UIViewController, UITableViewDataSource, UITableViewD
         self.automaticallyAdjustsScrollViewInsets = false
         
         speakTableView.separatorStyle = .none
-        
-        let orange = UIColor(red: 255.0/255.0, green: 123.0/255.0, blue: 105.0/255.0, alpha: 1.0);
-        let red = UIColor(red: 229.0/255.0, green: 57.0/255.0, blue: 53.0/255.0, alpha: 1.0);
         
         myTextView.layer.borderWidth = 1.0; //formatowanie wygladu pola tekstowego
         myTextView.layer.cornerRadius = 5.0;
@@ -66,33 +65,55 @@ class FirstViewController: UIViewController, UITableViewDataSource, UITableViewD
     }
     
     func animateIn() { // PopUp
+        
+        let rect = CGRect(origin: CGPoint(x: 0,y :0), size: CGSize(width: self.view.bounds.width, height: self.view.bounds.height))
+        
+        let effect = UIBlurEffect(style: UIBlurEffectStyle.light)
+        
+        effectView = UIVisualEffectView(effect: effect)
+        effectView.frame = rect
+        
+        self.view.addSubview(effectView)
+        
         self.view.addSubview(noweSzybkieZdanie)
         noweSzybkieZdanie.center = self.view.center
         
-        noweSzybkieZdanie.transform = CGAffineTransform.init(scaleX: 1.3, y: 1.3)
+        noweSzybkieZdanie.transform = CGAffineTransform.init(scaleX: 1.1, y: 1.1)
         noweSzybkieZdanie.alpha = 0
         
-        UIView.animate(withDuration: 0.4) {
-            self.visualEffectView.effect = self.effect
+        UIView.animate(withDuration: 0.2) {
             self.noweSzybkieZdanie.alpha = 1
             self.noweSzybkieZdanie.transform = CGAffineTransform.identity
         }
         
+        isPop = true
     }
     
     func animateOut() { // PopUp
-        UIView.animate(withDuration: 0.3, animations: {
-            self.noweSzybkieZdanie.transform = CGAffineTransform.init(scaleX: 1.3, y: 1.3)
+        UIView.animate(withDuration: 0.2, animations: {
+            self.noweSzybkieZdanie.transform = CGAffineTransform.init(scaleX: 1.1, y: 1.1)
             self.noweSzybkieZdanie.alpha = 0
             
-            self.visualEffectView.effect = nil
         }) { (success:Bool) in
+            self.effectView.removeFromSuperview()
             self.noweSzybkieZdanie.removeFromSuperview()
         }
+        
+        isPop = false
     }
     
     @IBAction func addItem(_ sender: Any) { // PopUp
-        animateIn()
+        if isPop == false
+        {
+            animateIn()
+        }
+    }
+
+    @IBAction func dodajZdanie(_ sender: Any) {
+        zdania.append(popTextField.text!)
+        speakTableView.reloadData()
+        popTextField.text = ""
+        animateOut()
     }
     
     @IBAction func dismissPopUp(_ sender: Any) { // PopUp
