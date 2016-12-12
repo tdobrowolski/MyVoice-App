@@ -11,6 +11,10 @@ import AVFoundation
 
 class FirstViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    @IBOutlet var noweSzybkieZdanie: UIView! // PopUp
+    
+    @IBOutlet weak var visualEffectView: UIVisualEffectView! // PopUp
+    
     @IBOutlet weak var speakTableView: UITableView!
     @IBOutlet weak var myTextView: UITextView!
     @IBOutlet weak var sayButton: UIButton!
@@ -22,9 +26,17 @@ class FirstViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     var zdania = ["Poproszę 3 kilo cebuli.", "Reszty nie trzeba.", "Kiedy będzie obiad?.", "Ta aplikacja jest super.", "Co to za ulica?", "Gdzie znajdę dobrą restaurację?"]
     
+    var effect:UIVisualEffect! // PopUp
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        effect = visualEffectView.effect
+        visualEffectView.effect = nil
+        
+        noweSzybkieZdanie.layer.cornerRadius = 5
+        
 
         self.speakTableView.delegate = self
         self.speakTableView.dataSource = self
@@ -52,7 +64,41 @@ class FirstViewController: UIViewController, UITableViewDataSource, UITableViewD
         self.hideKeyboardWhenTappedAround()
         
     }
-
+    
+    func animateIn() { // PopUp
+        self.view.addSubview(noweSzybkieZdanie)
+        noweSzybkieZdanie.center = self.view.center
+        
+        noweSzybkieZdanie.transform = CGAffineTransform.init(scaleX: 1.3, y: 1.3)
+        noweSzybkieZdanie.alpha = 0
+        
+        UIView.animate(withDuration: 0.4) {
+            self.visualEffectView.effect = self.effect
+            self.noweSzybkieZdanie.alpha = 1
+            self.noweSzybkieZdanie.transform = CGAffineTransform.identity
+        }
+        
+    }
+    
+    func animateOut() { // PopUp
+        UIView.animate(withDuration: 0.3, animations: {
+            self.noweSzybkieZdanie.transform = CGAffineTransform.init(scaleX: 1.3, y: 1.3)
+            self.noweSzybkieZdanie.alpha = 0
+            
+            self.visualEffectView.effect = nil
+        }) { (success:Bool) in
+            self.noweSzybkieZdanie.removeFromSuperview()
+        }
+    }
+    
+    @IBAction func addItem(_ sender: Any) { // PopUp
+        animateIn()
+    }
+    
+    @IBAction func dismissPopUp(_ sender: Any) { // PopUp
+        animateOut()
+    }
+    
     class ViewController: UIViewController, UINavigationControllerDelegate {
         func navigationControllerSupportedInterfaceOrientations(_ navigationController: UINavigationController) -> UIInterfaceOrientationMask {
             return UIInterfaceOrientationMask.portrait
