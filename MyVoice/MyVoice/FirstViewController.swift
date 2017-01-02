@@ -32,14 +32,16 @@ class FirstViewController: UIViewController, UITableViewDataSource, UITableViewD
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
-        let orange = UIColor(red: 255.0/255.0, green: 123.0/255.0, blue: 105.0/255.0, alpha: 1.0)
+                
+        let orange = hexStringToUIColor(hex: "#EF5B24")
         let red = UIColor(red: 229.0/255.0, green: 57.0/255.0, blue: 53.0/255.0, alpha: 1.0)
+        
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default) // przezroczysty navbar
+        navigationController?.navigationBar.shadowImage = UIImage()
+        navigationController?.navigationBar.isTranslucent = true
         
         noweSzybkieZdanie.layer.cornerRadius = 5
         
-        
-
         self.speakTableView.delegate = self
         self.speakTableView.dataSource = self
         
@@ -47,21 +49,41 @@ class FirstViewController: UIViewController, UITableViewDataSource, UITableViewD
         
         speakTableView.separatorStyle = .none
         
-        myTextView.layer.borderWidth = 1.0; //formatowanie wygladu pola tekstowego
         myTextView.layer.cornerRadius = 5.0;
-        myTextView.layer.borderColor = orange.cgColor;
         
         sayButton.backgroundColor = orange; //formatowanie przycisku "Powiedz"
-        sayButton.layer.cornerRadius = 5.0;
+        sayButton.layer.cornerRadius = 20
         
         showButton.backgroundColor = orange; //formatowanie przycisku "Pokaz"
-        showButton.layer.cornerRadius = 5.0;
+        showButton.layer.cornerRadius = 20
         
         deleteButton.backgroundColor = red; //formatowanie przycisku "Wyczysc pole tekstowe"
-        deleteButton.layer.cornerRadius = 5.0;
+        deleteButton.layer.cornerRadius = 20
         
         self.hideKeyboardWhenTappedAround()
         
+    }
+    
+    func hexStringToUIColor (hex:String) -> UIColor {
+        var cString:String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
+        
+        if (cString.hasPrefix("#")) {
+            cString.remove(at: cString.startIndex)
+        }
+        
+        if ((cString.characters.count) != 6) {
+            return UIColor.gray
+        }
+        
+        var rgbValue:UInt32 = 0
+        Scanner(string: cString).scanHexInt32(&rgbValue)
+        
+        return UIColor(
+            red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
+            green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
+            blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
+            alpha: CGFloat(1.0)
+        )
     }
     
     func animateIn() { // PopUp
@@ -147,7 +169,7 @@ class FirstViewController: UIViewController, UITableViewDataSource, UITableViewD
         
         cell.myLabel.text = zdania[indexPath.row]
         
-        cell.myBackground.layer.cornerRadius = 5
+        cell.myBackground.layer.cornerRadius = 20
         cell.myBackground.clipsToBounds = true
         
         return cell

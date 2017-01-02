@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
-        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
-        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -24,22 +22,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Co chcesz powiedzieć?" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ASD-hS-S7j">
-                                <rect key="frame" x="16" y="82" width="343" height="150"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="150" id="Ajq-IE-PhO"/>
-                                </constraints>
+                            <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="BackgroundFVC" translatesAutoresizingMaskIntoConstraints="NO" id="rUa-ch-KE5">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="206"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Co chcesz powiedzieć?" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ASD-hS-S7j">
+                                <rect key="frame" x="16" y="64" width="343" height="168"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="textColor" red="1" green="0.47503360630000002" blue="0.42093725770000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ILk-fR-aaj">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ILk-fR-aaj">
                                 <rect key="frame" x="16" y="240" width="166" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="8Nc-hO-eY6"/>
-                                    <constraint firstAttribute="width" constant="166" id="R4N-z7-rUH"/>
-                                </constraints>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Powiedz">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -47,8 +44,9 @@
                                     <action selector="txtToSpeech:" destination="9pv-A4-QxB" eventType="touchUpInside" id="TwG-oO-Jd0"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Des-ev-WUK">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Des-ev-WUK">
                                 <rect key="frame" x="193" y="240" width="166" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Wyświetl">
                                     <color key="titleColor" red="0.97916666669999997" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -56,11 +54,9 @@
                                     <segue destination="58x-hy-Xi6" kind="show" id="OVl-Ut-llK"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i0H-Z4-9wv">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i0H-Z4-9wv">
                                 <rect key="frame" x="16" y="292" width="343" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="rov-82-tcv"/>
-                                </constraints>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Wyczyść pole tekstowe">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -69,10 +65,11 @@
                                     <action selector="txtToSpeech:" destination="9pv-A4-QxB" eventType="touchUpInside" id="8Dl-ty-eMp"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Szybkie zdania" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4yN-GM-iAA">
-                                <rect key="frame" x="16" y="349" width="343" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Szybkie zdania" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4yN-GM-iAA">
+                                <rect key="frame" x="16" y="349" width="343" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
-                                <color key="textColor" red="1" green="0.47503360630000002" blue="0.42093725770000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="0.93725490196078431" green="0.35686274509803922" blue="0.14117647058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="k4V-vA-I5R">
@@ -84,10 +81,10 @@
                                         <rect key="frame" x="0.0" y="28" width="343" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qqP-29-WSN" id="ixX-R9-z85">
-                                            <rect key="frame" x="0.0" y="0.0" width="343" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BackgroundButton" translatesAutoresizingMaskIntoConstraints="NO" id="s0U-YX-GFh">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BackgroundFVC" translatesAutoresizingMaskIntoConstraints="NO" id="s0U-YX-GFh">
                                                     <rect key="frame" x="0.0" y="4" width="343" height="34.5"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ld-Xv-7gK">
@@ -117,31 +114,10 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="ILk-fR-aaj" firstAttribute="top" secondItem="Des-ev-WUK" secondAttribute="top" id="6Q3-Db-QEU"/>
-                            <constraint firstItem="Des-ev-WUK" firstAttribute="width" secondItem="ILk-fR-aaj" secondAttribute="width" id="6Wh-ZU-KTK"/>
-                            <constraint firstItem="ASD-hS-S7j" firstAttribute="trailing" secondItem="Des-ev-WUK" secondAttribute="trailing" id="6cl-3j-hvU"/>
-                            <constraint firstItem="ILk-fR-aaj" firstAttribute="top" secondItem="ASD-hS-S7j" secondAttribute="bottom" constant="8" symbolic="YES" id="8dt-MD-1qZ"/>
-                            <constraint firstItem="ASD-hS-S7j" firstAttribute="leading" secondItem="ILk-fR-aaj" secondAttribute="leading" id="9MJ-mw-oG9"/>
-                            <constraint firstItem="ILk-fR-aaj" firstAttribute="baseline" secondItem="Des-ev-WUK" secondAttribute="firstBaseline" id="DPR-GW-oa5"/>
-                            <constraint firstItem="ASD-hS-S7j" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" id="GoS-pf-lC2"/>
-                            <constraint firstItem="ASD-hS-S7j" firstAttribute="trailing" secondItem="tsR-hK-woN" secondAttribute="trailingMargin" id="OPh-To-yas"/>
-                            <constraint firstItem="4yN-GM-iAA" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" constant="16" id="SRf-qC-P9B"/>
-                            <constraint firstItem="4yN-GM-iAA" firstAttribute="top" secondItem="i0H-Z4-9wv" secondAttribute="bottom" constant="13" id="Tha-Sm-FTx"/>
-                            <constraint firstItem="Des-ev-WUK" firstAttribute="height" secondItem="ILk-fR-aaj" secondAttribute="height" id="WL8-Wa-nI4"/>
-                            <constraint firstItem="Des-ev-WUK" firstAttribute="baseline" secondItem="ILk-fR-aaj" secondAttribute="firstBaseline" id="YVR-WQ-CDL"/>
-                            <constraint firstItem="i0H-Z4-9wv" firstAttribute="top" secondItem="ILk-fR-aaj" secondAttribute="bottom" constant="8" symbolic="YES" id="egR-42-Wdj"/>
-                            <constraint firstItem="ILk-fR-aaj" firstAttribute="leading" secondItem="i0H-Z4-9wv" secondAttribute="leading" id="emw-vp-XOl"/>
-                            <constraint firstItem="Des-ev-WUK" firstAttribute="trailing" secondItem="i0H-Z4-9wv" secondAttribute="trailing" id="gcu-Sj-9PS"/>
-                            <constraint firstItem="ASD-hS-S7j" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="18" id="j3V-Ov-e9r"/>
-                            <constraint firstItem="Des-ev-WUK" firstAttribute="leading" secondItem="ILk-fR-aaj" secondAttribute="trailing" constant="11" id="sBu-QB-d4N"/>
-                            <constraint firstItem="i0H-Z4-9wv" firstAttribute="trailing" secondItem="4yN-GM-iAA" secondAttribute="trailing" id="vKi-2R-Vif"/>
-                            <constraint firstItem="i0H-Z4-9wv" firstAttribute="leading" secondItem="4yN-GM-iAA" secondAttribute="leading" id="xDG-he-cgl"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Powiedz" id="qjE-Zb-xxO">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Gu9-kh-My8">
-                            <color key="tintColor" red="1" green="0.47503360630000002" blue="0.42093725770000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="addItem:" destination="9pv-A4-QxB" id="33R-Oj-I9o"/>
                             </connections>
@@ -518,7 +494,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="BackgroundButton" width="125" height="125"/>
+        <image name="BackgroundFVC" width="375" height="206"/>
         <image name="first" width="18" height="18"/>
         <image name="second" width="18" height="18"/>
         <image name="third" width="18" height="18"/>
