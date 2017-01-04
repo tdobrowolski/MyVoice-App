@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E115464C1E1BEACA005485CD /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E115464B1E1BEACA005485CD /* CustomButton.swift */; };
+		E115464E1E1BF3BB005485CD /* CustomButtonRed.swift in Sources */ = {isa = PBXBuildFile; fileRef = E115464D1E1BF3BB005485CD /* CustomButtonRed.swift */; };
 		E15B58051DEB5E8D00322122 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15B58041DEB5E8D00322122 /* CollectionViewCell.swift */; };
 		E15B58071DEB5EAE00322122 /* NewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15B58061DEB5EAE00322122 /* NewViewController.swift */; };
 		E15FE15F1DFB6E8C00BC3C69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E11004561DFB664C00E9A659 /* Assets.xcassets */; };
@@ -37,6 +39,8 @@
 
 /* Begin PBXFileReference section */
 		E11004561DFB664C00E9A659 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Assets.xcassets; sourceTree = "<group>"; };
+		E115464B1E1BEACA005485CD /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		E115464D1E1BF3BB005485CD /* CustomButtonRed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButtonRed.swift; sourceTree = "<group>"; };
 		E15B58041DEB5E8D00322122 /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		E15B58061DEB5EAE00322122 /* NewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewViewController.swift; sourceTree = "<group>"; };
 		E16B82501DD11A2B008252F8 /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
@@ -89,6 +93,8 @@
 		E1BB3EDF1DFC524000F8254B /* FirstView */ = {
 			isa = PBXGroup;
 			children = (
+				E115464B1E1BEACA005485CD /* CustomButton.swift */,
+				E115464D1E1BF3BB005485CD /* CustomButtonRed.swift */,
 				E1EE42B31DCF745F00B869AE /* FirstViewController.swift */,
 				E1BB3EDD1DFC47CA00F8254B /* FirstViewControllerShow.swift */,
 				E1E6CE471DFAF913002D31A0 /* FirstViewControllerTableViewCell.swift */,
@@ -256,7 +262,9 @@
 			files = (
 				E1BB3EDE1DFC47CA00F8254B /* FirstViewControllerShow.swift in Sources */,
 				E15B58051DEB5E8D00322122 /* CollectionViewCell.swift in Sources */,
+				E115464C1E1BEACA005485CD /* CustomButton.swift in Sources */,
 				E1E6CE481DFAF913002D31A0 /* FirstViewControllerTableViewCell.swift in Sources */,
+				E115464E1E1BF3BB005485CD /* CustomButtonRed.swift in Sources */,
 				E1EE42B61DCF745F00B869AE /* SecondViewController.swift in Sources */,
 				E1EE42B21DCF745F00B869AE /* AppDelegate.swift in Sources */,
 				E15B58071DEB5EAE00322122 /* NewViewController.swift in Sources */,

@@ -32,9 +32,6 @@ class FirstViewController: UIViewController, UITableViewDataSource, UITableViewD
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-                
-        let orange = hexStringToUIColor(hex: "#EF5B24")
-        let red = UIColor(red: 229.0/255.0, green: 57.0/255.0, blue: 53.0/255.0, alpha: 1.0)
         
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default) // przezroczysty navbar
         navigationController?.navigationBar.shadowImage = UIImage()
@@ -51,14 +48,14 @@ class FirstViewController: UIViewController, UITableViewDataSource, UITableViewD
         
         myTextView.layer.cornerRadius = 5.0;
         
-        sayButton.backgroundColor = orange; //formatowanie przycisku "Powiedz"
-        sayButton.layer.cornerRadius = 20
+        myTextView.layer.masksToBounds = false
+        myTextView.layer.shadowRadius = 5.0
+        myTextView.layer.shadowColor = UIColor.darkGray.cgColor
+        myTextView.layer.shadowOffset = CGSize(width: 0, height: 2)
+        myTextView.layer.shadowOpacity = 0.2
         
-        showButton.backgroundColor = orange; //formatowanie przycisku "Pokaz"
-        showButton.layer.cornerRadius = 20
-        
-        deleteButton.backgroundColor = red; //formatowanie przycisku "Wyczysc pole tekstowe"
-        deleteButton.layer.cornerRadius = 20
+        //deleteButton.backgroundColor = red; //formatowanie przycisku "Wyczysc pole tekstowe"
+        //deleteButton.layer.cornerRadius = 20
         
         self.hideKeyboardWhenTappedAround()
         
