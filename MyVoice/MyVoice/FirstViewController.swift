@@ -54,9 +54,6 @@ class FirstViewController: UIViewController, UITableViewDataSource, UITableViewD
         myTextView.layer.shadowOffset = CGSize(width: 0, height: 2)
         myTextView.layer.shadowOpacity = 0.2
         
-        //deleteButton.backgroundColor = red; //formatowanie przycisku "Wyczysc pole tekstowe"
-        //deleteButton.layer.cornerRadius = 20
-        
         self.hideKeyboardWhenTappedAround()
         
     }

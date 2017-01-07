@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Csn-WO-7Jf">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -81,7 +81,7 @@
                                         <rect key="frame" x="0.0" y="28" width="343" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qqP-29-WSN" id="ixX-R9-z85">
-                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BackgroundFVC" translatesAutoresizingMaskIntoConstraints="NO" id="s0U-YX-GFh">
@@ -414,6 +414,14 @@
             </objects>
             <point key="canvasLocation" x="2165.5999999999999" y="682.3088455772114"/>
         </scene>
+        <!--Onboarding Pager-->
+        <scene sceneID="gWp-8F-evF">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="Csn-WO-7Jf" customClass="OnboardingPager" customModule="MyVoice" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QUm-jR-EPO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1260" y="0.0"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
             <objects>
@@ -434,6 +442,93 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+        <!--Step Zero-->
+        <scene sceneID="9Fe-c6-1Bq">
+            <objects>
+                <viewController storyboardIdentifier="StepZero" id="k2j-39-eDF" customClass="StepZero" customModule="MyVoice" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8Gk-Mz-E1x"/>
+                        <viewControllerLayoutGuide type="bottom" id="pZg-V9-kW8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gv3-aR-gIw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="StepZero" translatesAutoresizingMaskIntoConstraints="NO" id="Wm7-Tl-Ieb">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="pZg-V9-kW8" firstAttribute="top" secondItem="Wm7-Tl-Ieb" secondAttribute="bottom" id="I4Z-KN-KG4"/>
+                            <constraint firstItem="Wm7-Tl-Ieb" firstAttribute="leading" secondItem="gv3-aR-gIw" secondAttribute="leading" id="c6Z-xa-n1O"/>
+                            <constraint firstItem="Wm7-Tl-Ieb" firstAttribute="top" secondItem="gv3-aR-gIw" secondAttribute="top" id="jry-Rb-kr9"/>
+                            <constraint firstAttribute="trailing" secondItem="Wm7-Tl-Ieb" secondAttribute="trailing" id="kJc-ED-bxG"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fAB-nw-Lpr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2010.4000000000001" y="-711.09445277361328"/>
+        </scene>
+        <!--Step Two-->
+        <scene sceneID="04S-TV-u4H">
+            <objects>
+                <viewController storyboardIdentifier="StepTwo" id="Rsi-LE-1f4" customClass="StepTwo" customModule="MyVoice" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="LTW-lv-zxa"/>
+                        <viewControllerLayoutGuide type="bottom" id="Nnv-rE-cni"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="v8Q-Es-bCQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="StepTwo" translatesAutoresizingMaskIntoConstraints="NO" id="1eM-hf-i1Y">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="1eM-hf-i1Y" firstAttribute="leading" secondItem="v8Q-Es-bCQ" secondAttribute="leading" id="8XJ-EM-evp"/>
+                            <constraint firstAttribute="trailing" secondItem="1eM-hf-i1Y" secondAttribute="trailing" id="9Nz-LN-SqR"/>
+                            <constraint firstItem="1eM-hf-i1Y" firstAttribute="top" secondItem="v8Q-Es-bCQ" secondAttribute="top" id="RKN-lI-cne"/>
+                            <constraint firstItem="Nnv-rE-cni" firstAttribute="top" secondItem="1eM-hf-i1Y" secondAttribute="bottom" id="TiF-qG-Ls6"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="arY-Of-lDI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1263.2" y="-711.09445277361328"/>
+        </scene>
+        <!--Step Three-->
+        <scene sceneID="1se-2c-xof">
+            <objects>
+                <viewController storyboardIdentifier="StepThree" id="Afn-Lv-wxK" customClass="StepThree" customModule="MyVoice" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zKy-SV-RJt"/>
+                        <viewControllerLayoutGuide type="bottom" id="3sg-Ju-HQG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TmX-aN-aKD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="StepThree" translatesAutoresizingMaskIntoConstraints="NO" id="kWN-h7-OKo">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="kWN-h7-OKo" firstAttribute="leading" secondItem="TmX-aN-aKD" secondAttribute="leading" id="2tN-c5-pB1"/>
+                            <constraint firstAttribute="trailing" secondItem="kWN-h7-OKo" secondAttribute="trailing" id="6qD-fu-c3Q"/>
+                            <constraint firstItem="kWN-h7-OKo" firstAttribute="top" secondItem="TmX-aN-aKD" secondAttribute="top" id="9vz-tX-8OZ"/>
+                            <constraint firstItem="3sg-Ju-HQG" firstAttribute="top" secondItem="kWN-h7-OKo" secondAttribute="bottom" id="Tl0-cG-AOy"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s9d-4J-S3L" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-511.19999999999999" y="-710.19490254872574"/>
         </scene>
         <!--Powiedz-->
         <scene sceneID="0lg-kH-nYc">
@@ -495,6 +590,9 @@
     </scenes>
     <resources>
         <image name="BackgroundFVC" width="375" height="206"/>
+        <image name="StepThree" width="375" height="667"/>
+        <image name="StepTwo" width="375" height="667"/>
+        <image name="StepZero" width="375" height="667"/>
         <image name="first" width="18" height="18"/>
         <image name="second" width="18" height="18"/>
         <image name="third" width="18" height="18"/>
