@@ -15,10 +15,6 @@
 		E15FE1601DFB6E8D00BC3C69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E11004561DFB664C00E9A659 /* Assets.xcassets */; };
 		E16B82511DD11A2B008252F8 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16B82501DD11A2B008252F8 /* ThirdViewController.swift */; };
 		E16B82521DD11A2B008252F8 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16B82501DD11A2B008252F8 /* ThirdViewController.swift */; };
-		E181D2D91E1D982600ED0259 /* StepZero.swift in Sources */ = {isa = PBXBuildFile; fileRef = E181D2D81E1D982600ED0259 /* StepZero.swift */; };
-		E181D2DC1E1D98B200ED0259 /* StepTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E181D2DB1E1D98B200ED0259 /* StepTwo.swift */; };
-		E181D2DE1E1D98CD00ED0259 /* StepThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = E181D2DD1E1D98CD00ED0259 /* StepThree.swift */; };
-		E181D2E21E1D999700ED0259 /* OnboardingPager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E181D2E11E1D999700ED0259 /* OnboardingPager.swift */; };
 		E1A722A41DF36F7700459508 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1A722A31DF36F7700459508 /* MessageUI.framework */; };
 		E1BB3EDE1DFC47CA00F8254B /* FirstViewControllerShow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BB3EDD1DFC47CA00F8254B /* FirstViewControllerShow.swift */; };
 		E1E6CE481DFAF913002D31A0 /* FirstViewControllerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E6CE471DFAF913002D31A0 /* FirstViewControllerTableViewCell.swift */; };
@@ -48,10 +44,6 @@
 		E15B58041DEB5E8D00322122 /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		E15B58061DEB5EAE00322122 /* NewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewViewController.swift; sourceTree = "<group>"; };
 		E16B82501DD11A2B008252F8 /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
-		E181D2D81E1D982600ED0259 /* StepZero.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepZero.swift; sourceTree = "<group>"; };
-		E181D2DB1E1D98B200ED0259 /* StepTwo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepTwo.swift; sourceTree = "<group>"; };
-		E181D2DD1E1D98CD00ED0259 /* StepThree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepThree.swift; sourceTree = "<group>"; };
-		E181D2E11E1D999700ED0259 /* OnboardingPager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OnboardingPager.swift; path = ../OnboardingPager.swift; sourceTree = "<group>"; };
 		E1A722A31DF36F7700459508 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		E1BB3EDD1DFC47CA00F8254B /* FirstViewControllerShow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstViewControllerShow.swift; sourceTree = "<group>"; };
 		E1E6CE471DFAF913002D31A0 /* FirstViewControllerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstViewControllerTableViewCell.swift; sourceTree = "<group>"; };
@@ -98,17 +90,6 @@
 			name = SecondView;
 			sourceTree = "<group>";
 		};
-		E181D2DA1E1D982E00ED0259 /* OnBoarding */ = {
-			isa = PBXGroup;
-			children = (
-				E181D2E11E1D999700ED0259 /* OnboardingPager.swift */,
-				E181D2D81E1D982600ED0259 /* StepZero.swift */,
-				E181D2DB1E1D98B200ED0259 /* StepTwo.swift */,
-				E181D2DD1E1D98CD00ED0259 /* StepThree.swift */,
-			);
-			name = OnBoarding;
-			sourceTree = "<group>";
-		};
 		E1BB3EDF1DFC524000F8254B /* FirstView */ = {
 			isa = PBXGroup;
 			children = (
@@ -144,7 +125,6 @@
 			isa = PBXGroup;
 			children = (
 				E1EE42B11DCF745F00B869AE /* AppDelegate.swift */,
-				E181D2DA1E1D982E00ED0259 /* OnBoarding */,
 				E1BB3EDF1DFC524000F8254B /* FirstView */,
 				E15B580B1DEB6A9000322122 /* SecondView */,
 				E16B82501DD11A2B008252F8 /* ThirdViewController.swift */,
@@ -286,12 +266,8 @@
 				E1E6CE481DFAF913002D31A0 /* FirstViewControllerTableViewCell.swift in Sources */,
 				E115464E1E1BF3BB005485CD /* CustomButtonRed.swift in Sources */,
 				E1EE42B61DCF745F00B869AE /* SecondViewController.swift in Sources */,
-				E181D2DC1E1D98B200ED0259 /* StepTwo.swift in Sources */,
 				E1EE42B21DCF745F00B869AE /* AppDelegate.swift in Sources */,
-				E181D2E21E1D999700ED0259 /* OnboardingPager.swift in Sources */,
 				E15B58071DEB5EAE00322122 /* NewViewController.swift in Sources */,
-				E181D2DE1E1D98CD00ED0259 /* StepThree.swift in Sources */,
-				E181D2D91E1D982600ED0259 /* StepZero.swift in Sources */,
 				E16B82511DD11A2B008252F8 /* ThirdViewController.swift in Sources */,
 				E1EE42B41DCF745F00B869AE /* FirstViewController.swift in Sources */,
 			);

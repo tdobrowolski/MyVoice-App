@@ -16,12 +16,12 @@ class FirstViewControllerShow: UIViewController {
     var labelText = String()
     
     override func viewDidLoad() {
-        //largeText.transform = CGAffineTransform(rotationAngle: CGFloat.pi / 2)
         largeText.text = labelText
+        largeText.textColor = UIColor(red: 0.94, green: 0.29, blue: 0.05, alpha: 1.0)
         largeText.adjustsFontSizeToFitWidth = true
-        //largeText.transform = CGAffineTransform(rotationAngle: CGFloat.pi / 2)
-        //let value = UIInterfaceOrientation.landscapeLeft.rawValue
-        //UIDevice.current.setValue(value, forKey: "orientation")
+        
+        navigationController?.navigationBar.tintColor = UIColor(red: 0.94, green: 0.29, blue: 0.05, alpha: 1.0)
+        
     }
     
 }

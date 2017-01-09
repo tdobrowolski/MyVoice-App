@@ -38,7 +38,6 @@ class SecondViewController: UIViewController, UICollectionViewDelegate, UICollec
             as! CollectionViewCell
         
         cell.imageView?.image = self.imageArray[indexPath.row]
-        cell.layer.cornerRadius = 5.0
         
         return cell
         

@@ -15,7 +15,6 @@ class ThirdViewController: UIViewController, MFMessageComposeViewControllerDeleg
         
         controller.dismiss(animated: true, completion: nil)
     }
-
     
     @IBOutlet weak var firstCallButton: UIButton!
     @IBOutlet weak var firstSmsButton: UIButton!
@@ -25,17 +24,11 @@ class ThirdViewController: UIViewController, MFMessageComposeViewControllerDeleg
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let orange = UIColor(red: 255.0/255.0, green: 123.0/255.0, blue: 105.0/255.0, alpha: 1.0);
+        //firstCallButton.layer.cornerRadius = 25;
+        //secondCallButton.layer.cornerRadius = 25;
         
-        firstCallButton.backgroundColor = orange; //formatowanie przycisku "Zadzwon"
-        firstCallButton.layer.cornerRadius = 5.0;
-        secondCallButton.backgroundColor = orange;
-        secondCallButton.layer.cornerRadius = 5.0;
-        
-        firstSmsButton.backgroundColor = orange; //formatowanie przycisku "Wyslij alarmowego SMS'a"
-        firstSmsButton.layer.cornerRadius = 5.0;
-        secondSmsButton.backgroundColor = orange;
-        secondSmsButton.layer.cornerRadius = 5.0;
+        //firstSmsButton.layer.cornerRadius = 25;
+        //secondSmsButton.layer.cornerRadius = 25;
 
         // Do any additional setup after loading the view.
     }

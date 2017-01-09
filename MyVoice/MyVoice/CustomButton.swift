@@ -38,7 +38,6 @@ class CustomButton: UIButton {
         }
         
         let orange = hexStringToUIColor(hex: "#EF5B24")
-        let red = hexStringToUIColor(hex: "#E62622")
         
         if shadowLayer == nil {
             shadowLayer = CAShapeLayer()

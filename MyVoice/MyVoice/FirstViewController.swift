@@ -23,7 +23,7 @@ class FirstViewController: UIViewController, UITableViewDataSource, UITableViewD
     let synth = AVSpeechSynthesizer() //przechowywanie odniesienia
     var myTxtToSpeech = AVSpeechUtterance(string: "") //przechowywanie tekstu do odczytu
     
-    var zdania = ["Poproszę 3 kilo cebuli.", "Reszty nie trzeba.", "Kiedy będzie obiad?.", "Ta aplikacja jest super.", "Co to za ulica?", "Gdzie znajdę dobrą restaurację?"]
+    var zdania = ["Poproszę 3 kilo cebuli.", "Reszty nie trzeba.", "Kiedy będzie obiad?", "Ta aplikacja jest super.", "Co to za ulica?", "Gdzie znajdę dobrą restaurację?"]
     
     var isPop = false
     
@@ -36,8 +36,6 @@ class FirstViewController: UIViewController, UITableViewDataSource, UITableViewD
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default) // przezroczysty navbar
         navigationController?.navigationBar.shadowImage = UIImage()
         navigationController?.navigationBar.isTranslucent = true
-        
-        noweSzybkieZdanie.layer.cornerRadius = 5
         
         self.speakTableView.delegate = self
         self.speakTableView.dataSource = self
@@ -79,61 +77,13 @@ class FirstViewController: UIViewController, UITableViewDataSource, UITableViewD
             alpha: CGFloat(1.0)
         )
     }
-    
-    func animateIn() { // PopUp
         
-        let rect = CGRect(origin: CGPoint(x: 0,y :0), size: CGSize(width: self.view.bounds.width, height: self.view.bounds.height))
-        
-        let effect = UIBlurEffect(style: UIBlurEffectStyle.light)
-        
-        effectView = UIVisualEffectView(effect: effect)
-        effectView.frame = rect
-        
-        self.view.addSubview(effectView)
-        
-        self.view.addSubview(noweSzybkieZdanie)
-        noweSzybkieZdanie.center = self.view.center
-        
-        noweSzybkieZdanie.transform = CGAffineTransform.init(scaleX: 1.1, y: 1.1)
-        noweSzybkieZdanie.alpha = 0
-        
-        UIView.animate(withDuration: 0.2) {
-            self.noweSzybkieZdanie.alpha = 1
-            self.noweSzybkieZdanie.transform = CGAffineTransform.identity
-        }
-        
-        isPop = true
-    }
-    
-    func animateOut() { // PopUp
-        UIView.animate(withDuration: 0.2, animations: {
-            self.noweSzybkieZdanie.transform = CGAffineTransform.init(scaleX: 1.1, y: 1.1)
-            self.noweSzybkieZdanie.alpha = 0
-            
-        }) { (success:Bool) in
-            self.effectView.removeFromSuperview()
-            self.noweSzybkieZdanie.removeFromSuperview()
-        }
-        
-        isPop = false
-    }
-    
     @IBAction func addItem(_ sender: Any) { // PopUp
-        if isPop == false
+        if myTextView.text != ""
         {
-            animateIn()
+            zdania.append(myTextView.text)
+            speakTableView.reloadData()
         }
-    }
-
-    @IBAction func dodajZdanie(_ sender: Any) {
-        zdania.append(popTextField.text!)
-        speakTableView.reloadData()
-        popTextField.text = ""
-        animateOut()
-    }
-    
-    @IBAction func dismissPopUp(_ sender: Any) { // PopUp
-        animateOut()
     }
     
     class ViewController: UIViewController, UINavigationControllerDelegate {

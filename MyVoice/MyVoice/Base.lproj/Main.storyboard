@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Csn-WO-7Jf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -81,7 +81,7 @@
                                         <rect key="frame" x="0.0" y="28" width="343" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qqP-29-WSN" id="ixX-R9-z85">
-                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BackgroundFVC" translatesAutoresizingMaskIntoConstraints="NO" id="s0U-YX-GFh">
@@ -126,54 +126,12 @@
                     <connections>
                         <outlet property="deleteButton" destination="i0H-Z4-9wv" id="7N8-q8-rU1"/>
                         <outlet property="myTextView" destination="ASD-hS-S7j" id="PJP-X4-PYn"/>
-                        <outlet property="noweSzybkieZdanie" destination="01R-hr-yz5" id="RMb-Db-93u"/>
-                        <outlet property="popTextField" destination="rjc-9s-Tel" id="jZr-Ul-IJm"/>
                         <outlet property="sayButton" destination="ILk-fR-aaj" id="kWI-1w-OIT"/>
                         <outlet property="showButton" destination="Des-ev-WUK" id="jdQ-R1-ull"/>
                         <outlet property="speakTableView" destination="k4V-vA-I5R" id="0Yj-8a-9Yu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
-                <view contentMode="scaleToFill" id="01R-hr-yz5">
-                    <rect key="frame" x="0.0" y="0.0" width="330" height="130"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nowe szybkie zdanie:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eKk-I4-Bbd">
-                            <rect key="frame" x="16" y="17" width="298" height="21"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mhl-dg-gbB">
-                            <rect key="frame" x="268" y="85" width="46" height="30"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
-                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
-                            <state key="normal" title="Dodaj"/>
-                            <connections>
-                                <action selector="dodajZdanie:" destination="9pv-A4-QxB" eventType="touchUpInside" id="hVN-vb-1un"/>
-                            </connections>
-                        </button>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mY1-Fx-yuy">
-                            <rect key="frame" x="173" y="85" width="46" height="30"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
-                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
-                            <state key="normal" title="Anuluj"/>
-                            <connections>
-                                <action selector="dismissPopUp:" destination="9pv-A4-QxB" eventType="touchUpInside" id="J5c-lF-O28"/>
-                            </connections>
-                        </button>
-                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rjc-9s-Tel">
-                            <rect key="frame" x="16" y="49" width="298" height="30"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
-                            <color key="tintColor" red="1" green="0.47503360630000002" blue="0.42093725770000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <color key="textColor" red="1" green="0.47503360630000002" blue="0.42093725770000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits"/>
-                        </textField>
-                    </subviews>
-                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.85117737676056338" colorSpace="calibratedRGB"/>
-                </view>
             </objects>
             <point key="canvasLocation" x="1460" y="-321.58920539730138"/>
         </scene>
@@ -227,11 +185,11 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Imię Nazwisko" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VKC-Uy-soC" userLabel="First Name Label">
                                 <rect key="frame" x="16" y="82" width="343" height="29"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
-                                <color key="textColor" red="1" green="0.47503360630000002" blue="0.42093725770000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="0.93725490199999995" green="0.35686274509999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4nc-3c-geY">
-                                <rect key="frame" x="16" y="124" width="343" height="54"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4nc-3c-geY" customClass="CustomButton" customModule="MyVoice" customModuleProvider="target">
+                                <rect key="frame" x="16" y="126" width="343" height="54"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="54" id="r9u-kv-Wcl"/>
                                 </constraints>
@@ -243,8 +201,8 @@
                                     <action selector="FirstCallAction:" destination="uqd-a4-Y1l" eventType="touchUpInside" id="w4r-LY-OSE"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iNz-p6-Rix">
-                                <rect key="frame" x="16" y="191" width="343" height="54"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iNz-p6-Rix" customClass="CustomButton" customModule="MyVoice" customModuleProvider="target">
+                                <rect key="frame" x="16" y="195" width="343" height="54"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="54" id="x0W-Lw-Ooj"/>
                                 </constraints>
@@ -257,14 +215,14 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Imię Nazwisko" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Brg-Pe-cVr" userLabel="Second Name Label">
-                                <rect key="frame" x="16" y="253" width="343" height="29"/>
+                                <rect key="frame" x="16" y="269" width="343" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
-                                <color key="textColor" red="1" green="0.47503360630000002" blue="0.42093725770000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="0.93725490199999995" green="0.35686274509999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hdO-cM-297" userLabel="Second Call Button">
-                                <rect key="frame" x="16" y="295" width="343" height="54"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hdO-cM-297" userLabel="Second Call Button" customClass="CustomButton" customModule="MyVoice" customModuleProvider="target">
+                                <rect key="frame" x="16" y="313" width="343" height="54"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                 <state key="normal" title="Zadzwoń">
@@ -274,8 +232,8 @@
                                     <action selector="SecondCallAction:" destination="uqd-a4-Y1l" eventType="touchUpInside" id="BiR-Ey-Cbn"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Km6-LQ-jro" userLabel="Second Sms Button">
-                                <rect key="frame" x="16" y="362" width="343" height="54"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Km6-LQ-jro" userLabel="Second Sms Button" customClass="CustomButton" customModule="MyVoice" customModuleProvider="target">
+                                <rect key="frame" x="16" y="382" width="343" height="54"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                 <state key="normal" title="Wyślij alarmowego SMS'a">
@@ -299,7 +257,9 @@
                             <constraint firstItem="VKC-Uy-soC" firstAttribute="leading" secondItem="4nc-3c-geY" secondAttribute="leading" id="oF0-0R-hSa"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Powiadom" id="Zhj-vZ-yjG"/>
+                    <navigationItem key="navigationItem" title="Powiadom" id="Zhj-vZ-yjG">
+                        <barButtonItem key="rightBarButtonItem" image="EditIcon" id="xUb-BU-hbu"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="firstCallButton" destination="4nc-3c-geY" id="JjP-NA-D3H"/>
                         <outlet property="firstSmsButton" destination="iNz-p6-Rix" id="Wwn-Li-jYq"/>
@@ -414,14 +374,6 @@
             </objects>
             <point key="canvasLocation" x="2165.5999999999999" y="682.3088455772114"/>
         </scene>
-        <!--Onboarding Pager-->
-        <scene sceneID="gWp-8F-evF">
-            <objects>
-                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="Csn-WO-7Jf" customClass="OnboardingPager" customModule="MyVoice" customModuleProvider="target" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="QUm-jR-EPO" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1260" y="0.0"/>
-        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
             <objects>
@@ -442,93 +394,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="0.0" y="0.0"/>
-        </scene>
-        <!--Step Zero-->
-        <scene sceneID="9Fe-c6-1Bq">
-            <objects>
-                <viewController storyboardIdentifier="StepZero" id="k2j-39-eDF" customClass="StepZero" customModule="MyVoice" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="8Gk-Mz-E1x"/>
-                        <viewControllerLayoutGuide type="bottom" id="pZg-V9-kW8"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="gv3-aR-gIw">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="StepZero" translatesAutoresizingMaskIntoConstraints="NO" id="Wm7-Tl-Ieb">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="pZg-V9-kW8" firstAttribute="top" secondItem="Wm7-Tl-Ieb" secondAttribute="bottom" id="I4Z-KN-KG4"/>
-                            <constraint firstItem="Wm7-Tl-Ieb" firstAttribute="leading" secondItem="gv3-aR-gIw" secondAttribute="leading" id="c6Z-xa-n1O"/>
-                            <constraint firstItem="Wm7-Tl-Ieb" firstAttribute="top" secondItem="gv3-aR-gIw" secondAttribute="top" id="jry-Rb-kr9"/>
-                            <constraint firstAttribute="trailing" secondItem="Wm7-Tl-Ieb" secondAttribute="trailing" id="kJc-ED-bxG"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fAB-nw-Lpr" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-2010.4000000000001" y="-711.09445277361328"/>
-        </scene>
-        <!--Step Two-->
-        <scene sceneID="04S-TV-u4H">
-            <objects>
-                <viewController storyboardIdentifier="StepTwo" id="Rsi-LE-1f4" customClass="StepTwo" customModule="MyVoice" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="LTW-lv-zxa"/>
-                        <viewControllerLayoutGuide type="bottom" id="Nnv-rE-cni"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="v8Q-Es-bCQ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="StepTwo" translatesAutoresizingMaskIntoConstraints="NO" id="1eM-hf-i1Y">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="1eM-hf-i1Y" firstAttribute="leading" secondItem="v8Q-Es-bCQ" secondAttribute="leading" id="8XJ-EM-evp"/>
-                            <constraint firstAttribute="trailing" secondItem="1eM-hf-i1Y" secondAttribute="trailing" id="9Nz-LN-SqR"/>
-                            <constraint firstItem="1eM-hf-i1Y" firstAttribute="top" secondItem="v8Q-Es-bCQ" secondAttribute="top" id="RKN-lI-cne"/>
-                            <constraint firstItem="Nnv-rE-cni" firstAttribute="top" secondItem="1eM-hf-i1Y" secondAttribute="bottom" id="TiF-qG-Ls6"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="arY-Of-lDI" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1263.2" y="-711.09445277361328"/>
-        </scene>
-        <!--Step Three-->
-        <scene sceneID="1se-2c-xof">
-            <objects>
-                <viewController storyboardIdentifier="StepThree" id="Afn-Lv-wxK" customClass="StepThree" customModule="MyVoice" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="zKy-SV-RJt"/>
-                        <viewControllerLayoutGuide type="bottom" id="3sg-Ju-HQG"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="TmX-aN-aKD">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="StepThree" translatesAutoresizingMaskIntoConstraints="NO" id="kWN-h7-OKo">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="kWN-h7-OKo" firstAttribute="leading" secondItem="TmX-aN-aKD" secondAttribute="leading" id="2tN-c5-pB1"/>
-                            <constraint firstAttribute="trailing" secondItem="kWN-h7-OKo" secondAttribute="trailing" id="6qD-fu-c3Q"/>
-                            <constraint firstItem="kWN-h7-OKo" firstAttribute="top" secondItem="TmX-aN-aKD" secondAttribute="top" id="9vz-tX-8OZ"/>
-                            <constraint firstItem="3sg-Ju-HQG" firstAttribute="top" secondItem="kWN-h7-OKo" secondAttribute="bottom" id="Tl0-cG-AOy"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="s9d-4J-S3L" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-511.19999999999999" y="-710.19490254872574"/>
         </scene>
         <!--Powiedz-->
         <scene sceneID="0lg-kH-nYc">
@@ -590,9 +455,7 @@
     </scenes>
     <resources>
         <image name="BackgroundFVC" width="375" height="206"/>
-        <image name="StepThree" width="375" height="667"/>
-        <image name="StepTwo" width="375" height="667"/>
-        <image name="StepZero" width="375" height="667"/>
+        <image name="EditIcon" width="20" height="19"/>
         <image name="first" width="18" height="18"/>
         <image name="second" width="18" height="18"/>
         <image name="third" width="18" height="18"/>
