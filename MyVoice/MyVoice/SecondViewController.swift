@@ -12,9 +12,7 @@ class SecondViewController: UIViewController, UICollectionViewDelegate, UICollec
 
     @IBOutlet weak var collectionView: UICollectionView!
     
-    //let appleProducts = ["iPhone", "Apple Watch", "Mac", "iPad", "iPhone", "Apple Watch", "Mac", "iPad"]
-    
-    let imageArray = [UIImage(named: "Cross"), UIImage(named: "Police"), UIImage(named: "Cost"), UIImage(named: "WC"), UIImage(named: "laska"), UIImage(named: "lew"), UIImage(named: "ludzik"), UIImage(named: "las")]
+    let imageArray = [UIImage(named: "Cross"), UIImage(named: "Police"), UIImage(named: "Cost"), UIImage(named: "WC"), UIImage(named: "Exit"), UIImage(named: "Fine"), UIImage(named: "Eat"), UIImage(named: "WiFi")]
     
     override func viewDidLoad() {
         super.viewDidLoad()

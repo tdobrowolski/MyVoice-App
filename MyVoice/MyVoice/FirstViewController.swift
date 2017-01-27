@@ -8,6 +8,8 @@
 
 import UIKit
 import AVFoundation
+import RealmSwift
+import Realm
 
 class FirstViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
@@ -25,9 +27,7 @@ class FirstViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     var zdania = ["Poproszę 3 kilo cebuli.", "Reszty nie trzeba.", "Kiedy będzie obiad?", "Ta aplikacja jest super.", "Co to za ulica?", "Gdzie znajdę dobrą restaurację?"]
     
-    var isPop = false
-    
-    var effectView: UIVisualEffectView!
+    let QuickTexts = try! Realm().objects(QuickText.self).sorted(byProperty: "text")
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -78,12 +78,25 @@ class FirstViewController: UIViewController, UITableViewDataSource, UITableViewD
         )
     }
         
-    @IBAction func addItem(_ sender: Any) { // PopUp
+    @IBAction func addItem(_ sender: Any) {
+        
         if myTextView.text != ""
         {
-            zdania.append(myTextView.text)
+            let realm = try! Realm()
+            
+            //let QuickTexts = realm.objects(QuickText.self)
+            
+            let myQuickText = QuickText(value: [myTextView.text])
+            // You only need to do this once (per thread)
+            
+            // Add to the Realm inside a transaction
+            try! realm.write {
+                realm.add(myQuickText)
+            }
+            
             speakTableView.reloadData()
         }
+        
     }
     
     class ViewController: UIViewController, UINavigationControllerDelegate {
@@ -104,14 +117,16 @@ class FirstViewController: UIViewController, UITableViewDataSource, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return zdania.count
+        return QuickTexts.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "SpeakCell", for: indexPath) as! FirstViewControllerTableViewCell
         
-        cell.myLabel.text = zdania[indexPath.row]
+        let QuickTextsTable = QuickTexts[indexPath.row]
+        
+        cell.myLabel.text = QuickTextsTable.text
         
         cell.myBackground.layer.cornerRadius = 20
         cell.myBackground.clipsToBounds = true
@@ -127,10 +142,12 @@ class FirstViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        myTxtToSpeech = AVSpeechUtterance(string: zdania[indexPath.row]);
+        let QuickTextsTable = QuickTexts[indexPath.row]
+        
+        myTxtToSpeech = AVSpeechUtterance(string: QuickTextsTable.text);
         myTxtToSpeech.rate = 0.5;
         synth.speak(myTxtToSpeech);
-
+        
         tableView.deselectRow(at: indexPath, animated: true)
         
     }
@@ -140,7 +157,16 @@ class FirstViewController: UIViewController, UITableViewDataSource, UITableViewD
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         
         let delete = UITableViewRowAction(style: .normal, title: "     ") { (action, indexPath) in
-            self.zdania.remove(at: indexPath.row)
+            
+            //let QuickTextsTable = self.QuickTexts[indexPath.row]
+            let objectToDelete = self.QuickTexts[indexPath.row] as QuickText
+            
+            let realm = try! Realm()
+            
+            try! realm.write {
+                realm.delete(objectToDelete)
+            }
+            
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
         

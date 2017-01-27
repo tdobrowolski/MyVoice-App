@@ -23,12 +23,6 @@ class ThirdViewController: UIViewController, MFMessageComposeViewControllerDeleg
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //firstCallButton.layer.cornerRadius = 25;
-        //secondCallButton.layer.cornerRadius = 25;
-        
-        //firstSmsButton.layer.cornerRadius = 25;
-        //secondSmsButton.layer.cornerRadius = 25;
 
         // Do any additional setup after loading the view.
     }
@@ -66,15 +60,5 @@ class ThirdViewController: UIViewController, MFMessageComposeViewControllerDeleg
         present(secondMessage, animated: true, completion: nil)
     }
     
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
