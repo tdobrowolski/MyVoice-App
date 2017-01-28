@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import RealmSwift
+import Realm
 
 class ThirdViewControllerEdit: UIViewController {
     
@@ -58,7 +60,23 @@ class ThirdViewControllerEdit: UIViewController {
     
     @IBAction func SaveContacts(_ sender: Any) {
         
+        let realm = try! Realm()
         
+        let myContact = Contacts()
+        
+        myContact.id = 1
+        
+        myContact.NameOne = FirstEditName.text!
+        myContact.phoneNumberOne = FirstEditNumber.text!
+        
+        myContact.NameTwo = SecondEditName.text!
+        myContact.phoneNumberTwo = SecondEditNumber.text!
+        // You only need to do this once (per thread)
+        
+        // Add to the Realm inside a transaction
+        try! realm.write {
+            realm.add(myContact, update: true)
+        }
         
     }
     

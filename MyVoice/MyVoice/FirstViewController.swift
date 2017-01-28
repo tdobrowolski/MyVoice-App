@@ -30,7 +30,7 @@ class FirstViewController: UIViewController, UITableViewDataSource, UITableViewD
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
+
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default) // przezroczysty navbar
         navigationController?.navigationBar.shadowImage = UIImage()
         navigationController?.navigationBar.isTranslucent = true
