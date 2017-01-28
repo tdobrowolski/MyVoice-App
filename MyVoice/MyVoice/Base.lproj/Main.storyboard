@@ -266,6 +266,8 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="FirstLabel" destination="VKC-Uy-soC" id="gda-cH-X9m"/>
+                        <outlet property="SecondLabel" destination="Brg-Pe-cVr" id="Ow0-hO-rGz"/>
                         <outlet property="firstCallButton" destination="4nc-3c-geY" id="JjP-NA-D3H"/>
                         <outlet property="firstSmsButton" destination="iNz-p6-Rix" id="Wwn-Li-jYq"/>
                         <outlet property="secondCallButton" destination="hdO-cM-297" id="DA7-GL-QNo"/>

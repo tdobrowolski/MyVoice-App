@@ -18,7 +18,6 @@ class ThirdViewControllerEdit: UIViewController {
     @IBOutlet weak var SecondEditNumber: CustomTextField!
     @IBOutlet weak var SaveButton: UIButton!
     
-
     func hexStringToUIColor (hex:String) -> UIColor {
         var cString:String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
         
@@ -77,6 +76,10 @@ class ThirdViewControllerEdit: UIViewController {
         try! realm.write {
             realm.add(myContact, update: true)
         }
+        
+        ThirdViewController().reloadData()
+        
+        _ = navigationController?.popToRootViewController(animated: true)
         
     }
     

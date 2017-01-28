@@ -9,6 +9,8 @@
 import UIKit
 import MessageUI
 import ContactsUI
+import Realm
+import RealmSwift
 
 class ThirdViewController: UIViewController, MFMessageComposeViewControllerDelegate, CNContactPickerDelegate {
     
@@ -21,9 +23,15 @@ class ThirdViewController: UIViewController, MFMessageComposeViewControllerDeleg
     @IBOutlet weak var firstSmsButton: UIButton!
     @IBOutlet weak var secondCallButton: UIButton!
     @IBOutlet weak var secondSmsButton: UIButton!
+    @IBOutlet weak var FirstLabel: UILabel!
+    @IBOutlet weak var SecondLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        var myContact = try! Realm().objects(Contacts.self).first
+        FirstLabel.text = myContact?.NameOne
+        SecondLabel.text = myContact?.NameTwo
 
         // Do any additional setup after loading the view.
     }
@@ -61,9 +69,10 @@ class ThirdViewController: UIViewController, MFMessageComposeViewControllerDeleg
         present(secondMessage, animated: true, completion: nil)
     }
     
-    func contactPicker(picker: CNContactPickerViewController,
-                       didSelectContacts contacts: [CNContact]) {
-        print("Selected \(contacts.count) contacts")
+    func reloadData() {
+        
+        self.view.setNeedsDisplay()
+        
     }
     
     @IBAction func EditContacts(_ sender: Any) {

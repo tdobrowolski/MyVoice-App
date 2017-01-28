@@ -13,9 +13,6 @@ import Realm
 
 class FirstViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    @IBOutlet var noweSzybkieZdanie: UIView! // PopUp
-    @IBOutlet weak var popTextField: UITextField! // PopUp
-    
     @IBOutlet weak var speakTableView: UITableView!
     @IBOutlet weak var myTextView: UITextView!
     @IBOutlet weak var sayButton: UIButton!
@@ -26,7 +23,7 @@ class FirstViewController: UIViewController, UITableViewDataSource, UITableViewD
     var myTxtToSpeech = AVSpeechUtterance(string: "") //przechowywanie tekstu do odczytu
     
     let QuickTexts = try! Realm().objects(QuickText.self).sorted(byKeyPath: "text")
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -104,7 +101,7 @@ class FirstViewController: UIViewController, UITableViewDataSource, UITableViewD
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        var DestViewController : FirstViewControllerShow = segue.destination as! FirstViewControllerShow
+        let DestViewController : FirstViewControllerShow = segue.destination as! FirstViewControllerShow
         
         DestViewController.labelText = myTextView.text
         
@@ -156,7 +153,6 @@ class FirstViewController: UIViewController, UITableViewDataSource, UITableViewD
         
         let delete = UITableViewRowAction(style: .normal, title: "     ") { (action, indexPath) in
             
-            //let QuickTextsTable = self.QuickTexts[indexPath.row]
             let objectToDelete = self.QuickTexts[indexPath.row] as QuickText
             
             let realm = try! Realm()
