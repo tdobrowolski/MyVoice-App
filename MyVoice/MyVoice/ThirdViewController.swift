@@ -8,8 +8,9 @@
 
 import UIKit
 import MessageUI
+import ContactsUI
 
-class ThirdViewController: UIViewController, MFMessageComposeViewControllerDelegate {
+class ThirdViewController: UIViewController, MFMessageComposeViewControllerDelegate, CNContactPickerDelegate {
     
     func messageComposeViewController(_ controller: MFMessageComposeViewController, didFinishWith result: MessageComposeResult) {
         
@@ -59,6 +60,22 @@ class ThirdViewController: UIViewController, MFMessageComposeViewControllerDeleg
         
         present(secondMessage, animated: true, completion: nil)
     }
+    
+    func contactPicker(picker: CNContactPickerViewController,
+                       didSelectContacts contacts: [CNContact]) {
+        print("Selected \(contacts.count) contacts")
+    }
+    
+    @IBAction func EditContacts(_ sender: Any) {
+        
+        let controller = CNContactPickerViewController()
+        
+        controller.delegate = self
+        
+        navigationController?.present(controller, animated: true, completion: nil)
+        
+    }
+    
     
 
 }

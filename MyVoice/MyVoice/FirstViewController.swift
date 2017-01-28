@@ -25,9 +25,7 @@ class FirstViewController: UIViewController, UITableViewDataSource, UITableViewD
     let synth = AVSpeechSynthesizer() //przechowywanie odniesienia
     var myTxtToSpeech = AVSpeechUtterance(string: "") //przechowywanie tekstu do odczytu
     
-    var zdania = ["Poproszę 3 kilo cebuli.", "Reszty nie trzeba.", "Kiedy będzie obiad?", "Ta aplikacja jest super.", "Co to za ulica?", "Gdzie znajdę dobrą restaurację?"]
-    
-    let QuickTexts = try! Realm().objects(QuickText.self).sorted(byProperty: "text")
+    let QuickTexts = try! Realm().objects(QuickText.self).sorted(byKeyPath: "text")
     
     override func viewDidLoad() {
         super.viewDidLoad()

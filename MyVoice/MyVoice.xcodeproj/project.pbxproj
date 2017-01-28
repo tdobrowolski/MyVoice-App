@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		E115464C1E1BEACA005485CD /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E115464B1E1BEACA005485CD /* CustomButton.swift */; };
 		E115464E1E1BF3BB005485CD /* CustomButtonRed.swift in Sources */ = {isa = PBXBuildFile; fileRef = E115464D1E1BF3BB005485CD /* CustomButtonRed.swift */; };
+		E156FFCC1E3CD4E100000000 /* ThirdViewControllerEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = E156FFCB1E3CD4E100000000 /* ThirdViewControllerEdit.swift */; };
+		E156FFCE1E3CE05D00000000 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E156FFCD1E3CE05D00000000 /* CustomTextField.swift */; };
+		E156FFD11E3CEA1600000000 /* Contacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = E156FFD01E3CEA1600000000 /* Contacts.swift */; };
 		E15B58051DEB5E8D00322122 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15B58041DEB5E8D00322122 /* CollectionViewCell.swift */; };
 		E15B58071DEB5EAE00322122 /* NewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15B58061DEB5EAE00322122 /* NewViewController.swift */; };
 		E16B82511DD11A2B008252F8 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16B82501DD11A2B008252F8 /* ThirdViewController.swift */; };
@@ -59,6 +62,9 @@
 /* Begin PBXFileReference section */
 		E115464B1E1BEACA005485CD /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		E115464D1E1BF3BB005485CD /* CustomButtonRed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButtonRed.swift; sourceTree = "<group>"; };
+		E156FFCB1E3CD4E100000000 /* ThirdViewControllerEdit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewControllerEdit.swift; sourceTree = "<group>"; };
+		E156FFCD1E3CE05D00000000 /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		E156FFD01E3CEA1600000000 /* Contacts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contacts.swift; sourceTree = "<group>"; };
 		E15B58041DEB5E8D00322122 /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		E15B58061DEB5EAE00322122 /* NewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewViewController.swift; sourceTree = "<group>"; };
 		E16B82501DD11A2B008252F8 /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
@@ -105,6 +111,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E156FFCF1E3CE06800000000 /* ThirdView */ = {
+			isa = PBXGroup;
+			children = (
+				E16B82501DD11A2B008252F8 /* ThirdViewController.swift */,
+				E156FFCB1E3CD4E100000000 /* ThirdViewControllerEdit.swift */,
+				E156FFCD1E3CE05D00000000 /* CustomTextField.swift */,
+			);
+			name = ThirdView;
+			sourceTree = "<group>";
+		};
 		E15B580B1DEB6A9000322122 /* SecondView */ = {
 			isa = PBXGroup;
 			children = (
@@ -154,9 +170,10 @@
 			children = (
 				E1EE42B11DCF745F00B869AE /* AppDelegate.swift */,
 				E1B5FD251E3BC12400F16D50 /* QuickText.swift */,
+				E156FFD01E3CEA1600000000 /* Contacts.swift */,
 				E1BB3EDF1DFC524000F8254B /* FirstView */,
 				E15B580B1DEB6A9000322122 /* SecondView */,
-				E16B82501DD11A2B008252F8 /* ThirdViewController.swift */,
+				E156FFCF1E3CE06800000000 /* ThirdView */,
 				E1B5FD161E3BB29600F16D50 /* Assets.xcassets */,
 				E1EE42B71DCF745F00B869AE /* Main.storyboard */,
 				E1EE42BC1DCF745F00B869AE /* LaunchScreen.storyboard */,
@@ -306,14 +323,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E156FFCE1E3CE05D00000000 /* CustomTextField.swift in Sources */,
 				E1BB3EDE1DFC47CA00F8254B /* FirstViewControllerShow.swift in Sources */,
 				E1B5FD261E3BC12400F16D50 /* QuickText.swift in Sources */,
 				E15B58051DEB5E8D00322122 /* CollectionViewCell.swift in Sources */,
 				E115464C1E1BEACA005485CD /* CustomButton.swift in Sources */,
 				E1E6CE481DFAF913002D31A0 /* FirstViewControllerTableViewCell.swift in Sources */,
+				E156FFD11E3CEA1600000000 /* Contacts.swift in Sources */,
 				E115464E1E1BF3BB005485CD /* CustomButtonRed.swift in Sources */,
 				E1EE42B61DCF745F00B869AE /* SecondViewController.swift in Sources */,
 				E1EE42B21DCF745F00B869AE /* AppDelegate.swift in Sources */,
+				E156FFCC1E3CD4E100000000 /* ThirdViewControllerEdit.swift in Sources */,
 				E15B58071DEB5EAE00322122 /* NewViewController.swift in Sources */,
 				E16B82511DD11A2B008252F8 /* ThirdViewController.swift in Sources */,
 				E1EE42B41DCF745F00B869AE /* FirstViewController.swift in Sources */,

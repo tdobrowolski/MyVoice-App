@@ -81,7 +81,7 @@
                                         <rect key="frame" x="0.0" y="28" width="343" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qqP-29-WSN" id="ixX-R9-z85">
-                                            <rect key="frame" x="0.0" y="0.0" width="343" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BackgroundFVC" translatesAutoresizingMaskIntoConstraints="NO" id="s0U-YX-GFh">
@@ -258,7 +258,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Powiadom" id="Zhj-vZ-yjG">
-                        <barButtonItem key="rightBarButtonItem" image="EditIcon" id="xUb-BU-hbu"/>
+                        <barButtonItem key="rightBarButtonItem" image="EditIcon" id="xUb-BU-hbu">
+                            <connections>
+                                <action selector="EditContacts:" destination="uqd-a4-Y1l" id="o6N-H7-n2G"/>
+                                <segue destination="7x3-NY-CWq" kind="show" id="Nnr-GJ-Qfe"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="firstCallButton" destination="4nc-3c-geY" id="JjP-NA-D3H"/>
@@ -270,6 +275,93 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BtG-qT-MHG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2877.5999999999999" y="-0.44977511244377816"/>
+        </scene>
+        <!--Third View Controller Edit-->
+        <scene sceneID="rPR-jg-ZUa">
+            <objects>
+                <viewController id="7x3-NY-CWq" customClass="ThirdViewControllerEdit" customModule="MyVoice" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3pk-Aj-Dp9"/>
+                        <viewControllerLayoutGuide type="bottom" id="vT0-pI-gyf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eje-kL-AhO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Edytuj kontakty" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4s5-3c-Pcz">
+                                <rect key="frame" x="16" y="82" width="343" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                <color key="textColor" red="0.93890458345413208" green="0.35831499099731445" blue="0.14117202162742615" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pierwszy kontakt" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3qK-UZ-12W">
+                                <rect key="frame" x="16" y="125" width="343" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1bg-NM-AZt" customClass="CustomTextField" customModule="MyVoice" customModuleProvider="target">
+                                <rect key="frame" x="16" y="161" width="343" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aTf-ns-54c" customClass="CustomTextField" customModule="MyVoice" customModuleProvider="target">
+                                <rect key="frame" x="16" y="230" width="343" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Drugi kontakt" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GYf-A3-4VR">
+                                <rect key="frame" x="16" y="299" width="343" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="P2Y-eo-RdA" customClass="CustomTextField" customModule="MyVoice" customModuleProvider="target">
+                                <rect key="frame" x="16" y="335" width="343" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0rJ-Xf-46F" customClass="CustomTextField" customModule="MyVoice" customModuleProvider="target">
+                                <rect key="frame" x="16" y="404" width="343" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eiS-U1-Pe5">
+                                <rect key="frame" x="16" y="541" width="343" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <state key="normal" title="Zapisz">
+                                    <color key="titleColor" red="0.93890458349999995" green="0.35831499100000003" blue="0.1411720216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="SaveContacts:" destination="7x3-NY-CWq" eventType="touchUpInside" id="r2E-dh-g5F"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="FirstEditName" destination="1bg-NM-AZt" id="w35-Kz-8p7"/>
+                        <outlet property="FirstEditNumber" destination="aTf-ns-54c" id="FDg-Sg-B2l"/>
+                        <outlet property="SaveButton" destination="eiS-U1-Pe5" id="0nK-Me-JzG"/>
+                        <outlet property="SecondEditName" destination="P2Y-eo-RdA" id="JuJ-PL-LeB"/>
+                        <outlet property="SecondEditNumber" destination="0rJ-Xf-46F" id="4WL-ew-MoN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hHH-JJ-yrj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3600.8000000000002" y="-0.44977511244377816"/>
         </scene>
         <!--Pokaż-->
         <scene sceneID="wg7-f3-ORb">
