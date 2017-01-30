@@ -19,8 +19,8 @@ class FirstViewController: UIViewController, UITableViewDataSource, UITableViewD
     @IBOutlet weak var showButton: UIButton!
     @IBOutlet weak var deleteButton: UIButton!
     
-    let synth = AVSpeechSynthesizer() //przechowywanie odniesienia
-    var myTxtToSpeech = AVSpeechUtterance(string: "") //przechowywanie tekstu do odczytu
+    let synth = AVSpeechSynthesizer()
+    var myTxtToSpeech = AVSpeechUtterance(string: "")
     
     let QuickTexts = try! Realm().objects(QuickText.self).sorted(byKeyPath: "text")
 
@@ -82,9 +82,7 @@ class FirstViewController: UIViewController, UITableViewDataSource, UITableViewD
             //let QuickTexts = realm.objects(QuickText.self)
             
             let myQuickText = QuickText(value: [myTextView.text])
-            // You only need to do this once (per thread)
-            
-            // Add to the Realm inside a transaction
+
             try! realm.write {
                 realm.add(myQuickText)
             }
@@ -93,12 +91,6 @@ class FirstViewController: UIViewController, UITableViewDataSource, UITableViewD
         }
         
     }
-    
-    /*class ViewController: UIViewController, UINavigationControllerDelegate {
-        func navigationControllerSupportedInterfaceOrientations(_ navigationController: UINavigationController) -> UIInterfaceOrientationMask {
-            return UIInterfaceOrientationMask.portrait
-        }
-    }*/
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let DestViewController : FirstViewControllerShow = segue.destination as! FirstViewControllerShow

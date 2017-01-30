@@ -261,7 +261,6 @@
                     <navigationItem key="navigationItem" title="Powiadom" id="Zhj-vZ-yjG">
                         <barButtonItem key="rightBarButtonItem" image="EditIcon" id="xUb-BU-hbu">
                             <connections>
-                                <action selector="EditContacts:" destination="uqd-a4-Y1l" id="o6N-H7-n2G"/>
                                 <segue destination="7x3-NY-CWq" kind="show" id="Nnr-GJ-Qfe"/>
                             </connections>
                         </barButtonItem>
@@ -282,7 +281,7 @@
         <!--Third View Controller Edit-->
         <scene sceneID="rPR-jg-ZUa">
             <objects>
-                <viewController id="7x3-NY-CWq" customClass="ThirdViewControllerEdit" customModule="MyVoice" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EditContacts" id="7x3-NY-CWq" customClass="ThirdViewControllerEdit" customModule="MyVoice" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="3pk-Aj-Dp9"/>
                         <viewControllerLayoutGuide type="bottom" id="vT0-pI-gyf"/>
@@ -317,7 +316,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Drugi kontakt" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GYf-A3-4VR">
                                 <rect key="frame" x="16" y="299" width="343" height="21"/>

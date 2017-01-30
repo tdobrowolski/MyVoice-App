@@ -43,6 +43,8 @@ class ThirdViewControllerEdit: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.hideKeyboardWhenTappedAround()
+        
         FirstEditName.placeholder = "Imię i Nazwisko"
         FirstEditNumber.placeholder = "Numer telefonu"
         
@@ -57,27 +59,39 @@ class ThirdViewControllerEdit: UIViewController {
         
     }
     
+    func showAlertOk() {
+        let alert = UIAlertController(title: "Niepoprawne dane", message: "Wprowadź prawidłowe dane", preferredStyle: UIAlertControllerStyle.alert)
+        
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+
+        self.present(alert, animated: true, completion: nil)
+    }
+    
     @IBAction func SaveContacts(_ sender: Any) {
         
-        let realm = try! Realm()
-        
-        let myContact = Contacts()
-        
-        myContact.id = 1
-        
-        myContact.NameOne = FirstEditName.text!
-        myContact.phoneNumberOne = FirstEditNumber.text!
-        
-        myContact.NameTwo = SecondEditName.text!
-        myContact.phoneNumberTwo = SecondEditNumber.text!
-        // You only need to do this once (per thread)
-        
-        // Add to the Realm inside a transaction
-        try! realm.write {
-            realm.add(myContact, update: true)
+        if FirstEditName.text == "" || SecondEditName.text == "" || FirstEditNumber.text == "" || SecondEditNumber.text == "" {
+            showAlertOk()
+        } else {
+            let realm = try! Realm()
+            
+            let myContact = Contacts()
+            
+            myContact.id = 1
+            
+            myContact.NameOne = FirstEditName.text!
+            myContact.phoneNumberOne = FirstEditNumber.text!
+            
+            myContact.NameTwo = SecondEditName.text!
+            myContact.phoneNumberTwo = SecondEditNumber.text!
+            // You only need to do this once (per thread)
+            
+            // Add to the Realm inside a transaction
+            try! realm.write {
+                realm.add(myContact, update: true)
+            }
+            
+            _ = navigationController?.popToRootViewController(animated: true)
         }
-        
-        _ = navigationController?.popToRootViewController(animated: true)
         
     }
     
@@ -85,7 +99,6 @@ class ThirdViewControllerEdit: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
 
     /*
     // MARK: - Navigation
@@ -98,3 +111,4 @@ class ThirdViewControllerEdit: UIViewController {
     */
 
 }
+
