@@ -94,11 +94,11 @@ class FirstViewController: UIViewController, UITableViewDataSource, UITableViewD
         
     }
     
-    class ViewController: UIViewController, UINavigationControllerDelegate {
+    /*class ViewController: UIViewController, UINavigationControllerDelegate {
         func navigationControllerSupportedInterfaceOrientations(_ navigationController: UINavigationController) -> UIInterfaceOrientationMask {
             return UIInterfaceOrientationMask.portrait
         }
-    }
+    }*/
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let DestViewController : FirstViewControllerShow = segue.destination as! FirstViewControllerShow

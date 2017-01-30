@@ -15,7 +15,6 @@
 		E15B58051DEB5E8D00322122 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15B58041DEB5E8D00322122 /* CollectionViewCell.swift */; };
 		E15B58071DEB5EAE00322122 /* NewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15B58061DEB5EAE00322122 /* NewViewController.swift */; };
 		E16B82511DD11A2B008252F8 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16B82501DD11A2B008252F8 /* ThirdViewController.swift */; };
-		E16B82521DD11A2B008252F8 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16B82501DD11A2B008252F8 /* ThirdViewController.swift */; };
 		E1A722A41DF36F7700459508 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1A722A31DF36F7700459508 /* MessageUI.framework */; };
 		E1B5FD171E3BB29600F16D50 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1B5FD161E3BB29600F16D50 /* Assets.xcassets */; };
 		E1B5FD1B1E3BBD4400F16D50 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1B5FD191E3BBD4400F16D50 /* Realm.framework */; };
@@ -344,7 +343,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E16B82521DD11A2B008252F8 /* ThirdViewController.swift in Sources */,
 				E1EE42C91DCF745F00B869AE /* MyVoiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

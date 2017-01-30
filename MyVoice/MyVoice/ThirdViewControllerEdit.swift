@@ -77,8 +77,6 @@ class ThirdViewControllerEdit: UIViewController {
             realm.add(myContact, update: true)
         }
         
-        ThirdViewController().reloadData()
-        
         _ = navigationController?.popToRootViewController(animated: true)
         
     }
