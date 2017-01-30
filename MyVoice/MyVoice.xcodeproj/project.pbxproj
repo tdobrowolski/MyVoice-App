@@ -15,6 +15,7 @@
 		E15B58051DEB5E8D00322122 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15B58041DEB5E8D00322122 /* CollectionViewCell.swift */; };
 		E15B58071DEB5EAE00322122 /* NewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15B58061DEB5EAE00322122 /* NewViewController.swift */; };
 		E16B82511DD11A2B008252F8 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16B82501DD11A2B008252F8 /* ThirdViewController.swift */; };
+		E19B14771E3FED6300F5ED77 /* default.realm in Resources */ = {isa = PBXBuildFile; fileRef = E19B14761E3FED6300F5ED77 /* default.realm */; };
 		E1A722A41DF36F7700459508 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1A722A31DF36F7700459508 /* MessageUI.framework */; };
 		E1B5FD171E3BB29600F16D50 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1B5FD161E3BB29600F16D50 /* Assets.xcassets */; };
 		E1B5FD1B1E3BBD4400F16D50 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1B5FD191E3BBD4400F16D50 /* Realm.framework */; };
@@ -28,7 +29,6 @@
 		E1EE42B41DCF745F00B869AE /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EE42B31DCF745F00B869AE /* FirstViewController.swift */; };
 		E1EE42B61DCF745F00B869AE /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EE42B51DCF745F00B869AE /* SecondViewController.swift */; };
 		E1EE42B91DCF745F00B869AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1EE42B71DCF745F00B869AE /* Main.storyboard */; };
-		E1EE42BE1DCF745F00B869AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1EE42BC1DCF745F00B869AE /* LaunchScreen.storyboard */; };
 		E1EE42C91DCF745F00B869AE /* MyVoiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EE42C81DCF745F00B869AE /* MyVoiceTests.swift */; };
 		E1EE42D51DCF8D8700B869AE /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1EE42D41DCF8D8700B869AE /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
@@ -67,6 +67,7 @@
 		E15B58041DEB5E8D00322122 /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		E15B58061DEB5EAE00322122 /* NewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewViewController.swift; sourceTree = "<group>"; };
 		E16B82501DD11A2B008252F8 /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
+		E19B14761E3FED6300F5ED77 /* default.realm */ = {isa = PBXFileReference; lastKnownFileType = file; path = default.realm; sourceTree = "<group>"; };
 		E1A722A31DF36F7700459508 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		E1B5FD161E3BB29600F16D50 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Assets.xcassets; sourceTree = "<group>"; };
 		E1B5FD181E3BBD1E00F16D50 /* ios */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ios; sourceTree = "<group>"; };
@@ -167,6 +168,7 @@
 		E1EE42B01DCF745E00B869AE /* MyVoice */ = {
 			isa = PBXGroup;
 			children = (
+				E19B14761E3FED6300F5ED77 /* default.realm */,
 				E1EE42B11DCF745F00B869AE /* AppDelegate.swift */,
 				E1B5FD251E3BC12400F16D50 /* QuickText.swift */,
 				E156FFD01E3CEA1600000000 /* Contacts.swift */,
@@ -286,9 +288,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E1EE42BE1DCF745F00B869AE /* LaunchScreen.storyboard in Resources */,
 				E1B5FD171E3BB29600F16D50 /* Assets.xcassets in Resources */,
 				E1EE42B91DCF745F00B869AE /* Main.storyboard in Resources */,
+				E19B14771E3FED6300F5ED77 /* default.realm in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -474,7 +476,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = V9858W9DAL;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -492,7 +494,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = V9858W9DAL;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

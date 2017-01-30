@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import RealmSwift
+import Realm
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -23,6 +25,33 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().tintColor = UIColor.white
         UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : UIColor.white]
         UIApplication.shared.statusBarStyle = .lightContent
+        
+        let bundlePath = Bundle.main.path(forResource: "default", ofType: "realm")
+        let destPath = Realm.Configuration.defaultConfiguration.fileURL?.path
+        let fileManager = FileManager.default
+        
+        if fileManager.fileExists(atPath: destPath!) {
+            //File exist, do nothing
+            //print(fileManager.fileExists(atPath: destPath!))
+            print("N I C O")
+        } else {
+            do {
+                //Copy file from bundle to Realm default path
+                try fileManager.copyItem(atPath: bundlePath!, toPath: destPath!)
+                print("H U R R A")
+            } catch {
+                print("\n",error)
+            }
+        }
+        
+        /*let launchedBefore = UserDefaults.standard.bool(forKey: "launchedBefore")
+        if launchedBefore  {
+            print("Not first launch.")
+        } else {
+            print("First launch, setting UserDefault.")
+            UserDefaults.standard.set(true, forKey: "launchedBefore")
+        }*/
+        
         return true
     }
 
